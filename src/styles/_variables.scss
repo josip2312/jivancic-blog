@@ -1,0 +1,63 @@
+/** Base Styles */
+:root {
+  /**
+   * Colors
+   * --------------------------------------------------------------------- */
+
+  --c-scrollbar-light: hsla(0, 0%, 0%, 0.25);
+  --c-scrollbar-dark: hsla(0, 0%, 100%, 0.25);
+
+  --c-white: #ffffff;
+  --c-white-dark: hsl(0, 0%, 90%);
+  --c-black: #000000;
+
+  --c-text-light-1: hsl(215, 25%, 25%);
+  --c-text-light-2: hsl(215, 25%, 32%);
+  --c-text-light-3: hsl(216, 20%, 45%);
+
+  --c-text-dark-1: hsl(215, 50%, 94%);
+  --c-text-dark-2: hsl(215, 50%, 90%);
+  --c-text-dark-3: hsl(215, 20%, 72.5%);
+}
+
+:root {
+  --c-scrollbar: var(--c-scrollbar-light);
+
+  --c-bg: var(--c-white);
+  --c-bg-accent: var(--c-white-dark);
+
+  --c-text: var(--c-text-light-1);
+  --c-text-light: var(--c-text-light-2);
+  --c-text-lighter: var(--c-text-light-3);
+
+  --c-brand: hsl(215, 75%, 42.5%);
+}
+
+html.dark {
+  --c-scrollbar: var(--c-scrollbar-dark);
+
+  --c-bg: hsl(0, 0%, 7%);
+  --c-bg-accent: #222;
+  --c-bg-secondary: #222;
+
+  --c-text: var(--c-text-dark-1);
+  --c-text-light: var(--c-text-dark-2);
+  --c-text-lighter: var(--c-text-dark-3);
+
+  --c-divider-light: rgba(200, 200, 200, 0.1);
+
+  --code-bg-color: #191919;
+  --code-inline-bg-color: rgba(255, 255, 255, 0.04);
+  --code-highlight: rgba(0, 0, 0, 0.66);
+
+  --c-brand: hsl(215, 75%, 65%);
+}
+
+// fallback
+:root {
+  --code-line-height: 24px;
+  --code-font-family: var(--font-family-mono);
+  --code-font-size: 14px;
+  --code-inline-bg-color: rgba(27, 31, 35, 0.05);
+  --code-bg-color: #282c34;
+}

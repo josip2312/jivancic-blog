@@ -1,0 +1,29 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress",
+    "build": "vitepress build posts",
+    "serve": "vitepress serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^7.20.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "@vue/eslint-config-typescript": "^9.0.0",
+    "cheap-watch": "^1.0.4",
+    "gray-matter": "^4.0.3",
+    "sass": "^1.43.3",
+    "typescript": "^4.4.4",
+    "vitepress": "^0.20.0"
+  },
+  "dependencies": {
+    "@vueuse/core": "^6.7.4"
+  }
+}
