@@ -1,0 +1,32 @@
+@use "mixins" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  transition: background-color 150ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--c-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--c-scrollbar);
+  border-radius: 6px;
+}
+
+html {
+  scrollbar-color: var(--c-scrollbar) var(--c-bg);
+}

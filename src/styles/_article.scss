@@ -1,0 +1,11 @@
+p {
+  color: var(--c-text-light);
+}
+
+blockquote p {
+  color: var(--c-text-lighter);
+}
+
+.article-title {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}

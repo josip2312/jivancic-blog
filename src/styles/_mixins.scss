@@ -1,0 +1,5 @@
+@mixin mq-small {
+  @media screen and(min-width: 720px) {
+    @content;
+  }
+}

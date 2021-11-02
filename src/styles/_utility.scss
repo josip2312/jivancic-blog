@@ -1,0 +1,42 @@
+@use "mixins" as *;
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  margin-bottom: 1rem;
+  @media screen and(min-width: 720px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.route {
+  padding: 1rem 0;
+
+  @media screen and(min-width: 720px) {
+    padding: 2.5rem 0;
+  }
+}
+
+.icon {
+  width: 1.25rem;
+  fill: currentColor;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacing, 1em);
+}
+
+.spacing-horizontal > * + * {
+  margin-left: var(--spacing, 1em);
+}
