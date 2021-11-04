@@ -1,16 +1,6 @@
-<script setup lang="ts">
-import Github from "./icons/Github.vue";
-import Linkedin from "./icons/Linkedin.vue";
-import Instagram from "./icons/Instagram.vue";
-</script>
-
 <template>
   <footer class="footer spacing-horizontal">
-    <a
-      href="https://github.com/josip2312"
-      class="footer-link"
-      target="_blank"
-    >
+    <a href="https://github.com/josip2312" class="footer-link" target="_blank">
       <Github />
     </a>
     <a

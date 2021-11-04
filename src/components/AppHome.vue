@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import PostPreview from "./PostPreview.vue";
 import posts from "../../.vitepress/metadata.json";
 </script>
 
 <template>
-  <div class="route">
+  <div>
     <h1 class="h1 title">All posts</h1>
     <div class="posts">
       <PostPreview v-for="post in posts" :key="post.title" :post="post" />
@@ -15,6 +14,8 @@ import posts from "../../.vitepress/metadata.json";
 <style lang="scss" scoped>
 .posts {
   & > * + * {
+    padding-top: 2rem;
+    margin-top: 2rem;
     border-top: thin solid var(--c-divider);
   }
 }

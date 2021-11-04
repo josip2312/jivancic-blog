@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { reactive, PropType } from "vue";
-import ArrowRight from "./icons/ArrowRight.vue";
 
 interface Date {
   string: string;
@@ -49,14 +48,14 @@ const { title, description, href, date, tags } = reactive(props.post);
 </template>
 
 <style lang="scss" scoped>
-@use "@/styles/mixins" as *;
+@use "../styles/mixins" as *;
 
 .post {
   color: var(--c-text);
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  // padding: 2rem 0;
 
   @include mq-small {
     --spacing: 1.25em;

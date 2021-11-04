@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import ChevronUp from "./icons/ChevronUp.vue";
-
 const scrollToTop = () => window.scrollTo(0, 0);
 </script>
 

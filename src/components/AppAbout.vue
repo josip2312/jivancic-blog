@@ -1,7 +1,5 @@
-<script setup></script>
-
 <template>
-  <div class="route about">
+  <div class="about">
     <h1 class="h1 title">About me</h1>
     <div class="about-content">
       <p>
@@ -34,7 +32,6 @@
 <style lang="scss" scoped>
 .about-content {
   max-width: 65ch;
-  margin-top: 3rem;
   color: var(--c-text-lighter);
   font-size: 1.1rem;
 }
