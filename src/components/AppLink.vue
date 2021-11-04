@@ -1,18 +1,17 @@
+<script setup lang="ts">
+interface Props {
+  href?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+  href: "#",
+});
+</script>
+
 <template>
-  <a :href="href" target="_blank">
+  <a :href="href" target="_blank" rel="noopener">
     <slot />
   </a>
 </template>
-
-<script setup lang="ts">
-import { PropType } from "vue";
-
-defineProps({
-  href: {
-    type: String as PropType<string>,
-    default: "#",
-  },
-});
-</script>
 
 <style lang="scss" scoped></style>

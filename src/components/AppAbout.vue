@@ -21,9 +21,9 @@
       </p>
       <p>
         You can find me on
-        <a href="https://github.com/josip2312">Github</a>,
-        <a href="https://github.com/josip2312">LinkedIn</a>, and
-        <a href="https://github.com/josip2312">Instagram</a>
+        <AppLink> Github, </AppLink>
+        <AppLink> LinkedIn </AppLink> and
+        <AppLink> Instagram </AppLink>
       </p>
     </div>
   </div>

@@ -1,22 +1,16 @@
 <template>
   <footer class="footer spacing-horizontal">
-    <a href="https://github.com/josip2312" class="footer-link" target="_blank">
+    <AppLink class="footer-link" href="https://github.com/josip2312">
       <Github />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/josip-ivancic-b3521a1b4/"
-      target="_blank"
-      class="footer-link"
-    >
+    </AppLink>
+
+    <AppLink class="footer-link" href="https://github.com/josip2312">
       <Linkedin />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/josip-ivancic-b3521a1b4/"
-      target="_blank"
-      class="footer-link"
-    >
+    </AppLink>
+
+    <AppLink class="footer-link" href="https://github.com/josip2312">
       <Instagram />
-    </a>
+    </AppLink>
   </footer>
 </template>
 
