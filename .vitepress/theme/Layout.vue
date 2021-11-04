@@ -25,7 +25,7 @@ const isPage = computed(() => frontmatter.value.page);
 </template>
 
 <style lang="scss">
-@use "../../src/styles/mixins" as *;
+@use "@/styles/mixins" as *;
 
 .desktop-nav {
   display: none;

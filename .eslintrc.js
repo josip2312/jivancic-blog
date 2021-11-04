@@ -5,6 +5,7 @@ module.exports = {
   globals: {
     defineProps: "readonly",
     defineEmits: "readonly",
+    withDefaults: "readonly",
   },
   extends: [
     "@vue/typescript/recommended",

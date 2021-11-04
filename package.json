@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vitepress",
-    "build": "vitepress build posts --mpa",
+    "build": "vitepress build",
     "serve": "vitepress serve"
   },
   "author": "",

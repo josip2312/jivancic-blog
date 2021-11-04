@@ -7,7 +7,7 @@ tags: ["vue", "scss", "webpack"]
 ---
 
 <script setup>
-import PostMeta from '../src/components/PostMeta.vue'
+import PostMeta from '@/components/PostMeta.vue'
 </script>
 
 <PostMeta />

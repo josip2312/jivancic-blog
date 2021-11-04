@@ -35,7 +35,7 @@ const { frontmatter } = useData();
 </template>
 
 <style lang="scss" scoped>
-@use "../styles/_mixins.scss" as *;
+@use "@/styles/_mixins.scss" as *;
 .post-data {
   margin-top: 1.5rem;
 }
