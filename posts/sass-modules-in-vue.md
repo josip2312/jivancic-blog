@@ -1,13 +1,13 @@
 ---
-title: Sass modules in Vue 3
+title: Sass modules with the Vue CLI
 date: 2021-11-01
 author: Josip Ivancic
-description: Exploring webpack configuration and setting up sass modules with Vue 3 and the Vue CLI
+description: How to configure webpack for sass modules and set up scalable stylesheets with Vue 3 and the Vue CLI
 tags: ["vue", "scss", "webpack"]
 ---
 
 <script setup>
-import PostMeta from '@/components/PostMeta.vue'
+import PostMeta from '../src/components/PostMeta.vue'
 </script>
 
 <PostMeta />
@@ -189,7 +189,7 @@ export default {
 
 And the result is:
 
-![Hello world](/assets/result.png)
+![Hello world](../assets/result.png)
 
 ---
 

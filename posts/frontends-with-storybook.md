@@ -7,7 +7,7 @@ tags: ["frontend", "storybook", "testing"]
 ---
 
 <script setup>
-import PostMeta from '@/components/PostMeta.vue'
+import PostMeta from '../src/components/PostMeta.vue'
 </script>
 
 <PostMeta />
