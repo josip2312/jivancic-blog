@@ -14,6 +14,8 @@ import PostMeta from '@/components/PostMeta.vue'
 
 > The new sass modules are only compatible with Dart Sass which you should be using. More info can be found on the official [sass-lang.com](https://sass-lang.com/blog/the-module-system-is-launched#use-the-heart-of-the-module-systemhttps://) page.
 
+See full example on repo: [vue-cli-sass](https://github.com/josip2312/vue-cli-sass).
+
 Not enough people are aware of the [announcement](https://sass-lang.com/blog/the-module-system-is-launchedhttps://) of the new Sass module system, of which the primary aim is to replace the `@import` rule with `@use` and `@forward`. It also exposes various built-in modules such as **sass:color**, **sass:map**, etc. If you're wondering why you should use `@use` over `@import`, in short, `@import` is being replaced with more explicit `@use` and `@forward` rules, it forces you to a more complex setup but will be worth it in the long run, especially if you're building some kind of library or package. Over the next few years Sass `@import` will be deprecated, and then removed.
 
 ## The @use rule

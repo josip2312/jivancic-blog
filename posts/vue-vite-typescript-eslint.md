@@ -14,6 +14,8 @@ import PostMeta from '@/components/PostMeta.vue'
 
 ## Create-vue
 
+See full example on repo: [vue-ts-eslint-template](https://github.com/josip2312/vue-ts-eslint-template).
+
 Use the repo [create-vue](https://github.com/vuejs/create-vue) to get started, this will be the official way to set up a new Vue project with Vite in the future. After running `npm init vue@next` choose the options appropriate for your use case.
 
 ### Volar
