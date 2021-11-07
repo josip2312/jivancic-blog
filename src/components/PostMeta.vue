@@ -50,6 +50,8 @@ const { frontmatter } = useData();
   }
 
   .date {
+    font-size: 0.875rem;
+    white-space: nowrap;
     color: var(--c-text-light);
     margin: 0;
     margin-top: 0.25rem;

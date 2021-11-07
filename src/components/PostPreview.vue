@@ -25,7 +25,7 @@ const { title, description, href, date, tags } = reactive(props.post);
 </script>
 
 <template>
-  <div class="post spacing">
+  <li class="post spacing">
     <h2 class="post-title">
       {{ title }}
     </h2>
@@ -44,7 +44,7 @@ const { title, description, href, date, tags } = reactive(props.post);
         {{ date.string }}
       </div>
     </div>
-  </div>
+  </li>
 </template>
 
 <style lang="scss" scoped>
