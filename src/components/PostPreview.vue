@@ -25,25 +25,27 @@ const { title, description, href, date, tags } = reactive(props.post);
 </script>
 
 <template>
-  <li class="post spacing">
-    <h2 class="post-title">
-      {{ title }}
-    </h2>
-    <p class="post-description">
-      {{ description }}
-    </p>
-    <div class="post-tags">
-      <span v-for="tag in tags" :key="tag" class="post-tag">{{ tag }}</span>
-    </div>
-    <div class="post-footer">
-      <a :href="href" class="post-link">
-        <span class="span">Read more</span>
-        <ArrowRight />
-      </a>
-      <div class="post-date">
-        {{ date.string }}
+  <li class="post">
+    <a :href="href" class="post-wrapper spacing">
+      <h2 class="post-title">
+        {{ title }}
+      </h2>
+      <p class="post-description">
+        {{ description }}
+      </p>
+      <div class="post-tags">
+        <span v-for="tag in tags" :key="tag" class="post-tag">{{ tag }}</span>
       </div>
-    </div>
+      <div class="post-footer">
+        <a :href="href" class="post-link">
+          <span class="span">Read more</span>
+          <ArrowRight />
+        </a>
+        <div class="post-date">
+          {{ date.string }}
+        </div>
+      </div>
+    </a>
   </li>
 </template>
 
@@ -52,12 +54,16 @@ const { title, description, href, date, tags } = reactive(props.post);
 
 .post {
   color: var(--c-text);
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
 
-  @include mq-small {
-    --spacing: 1.25em;
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+
+    @include mq-small {
+      --spacing: 1.25em;
+    }
   }
 
   &-title {

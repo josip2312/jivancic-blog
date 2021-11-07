@@ -11,6 +11,7 @@ import posts from "../../.vitepress/metadata.json";
 
 <style lang="scss" scoped>
 .posts {
+  list-style: none;
   margin: 0;
   padding: 0;
   line-height: 1.4;
