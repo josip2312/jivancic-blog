@@ -21,16 +21,40 @@ const { fullName: name } = person;
 console.log(name); // => David
 ```
 
+## Vue script setup Prop typing with default values and complex types
+
+```vue
+<script setup lang="ts">
+import { reactive } from "vue";
+
+type Size = "sm" | "md" | "lg";
+
+interface Props {
+  primary?: boolean;
+  size?: Size;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  primary: false,
+  size: "md",
+});
+
+const { primary /* type: boolean */, size /* type: Size */ } = reactive(props);
+</script>
+```
+
 ## Vue options API prop typing
 
 ```vue
-<script>
-import { PropType } from "vue";
+<script lang="ts">
+import { defineComponent, PropType } from "vue";
 
-export default {
+export default defineComponent({
+  name: "MyComponent",
   props: {
-    type: String as PropType<string>, // cast to typescript type
-  }
-}
+    type: String as PropType<string>, // cast to typescript type,
+    default: "box",
+  },
+});
 </script>
 ```
