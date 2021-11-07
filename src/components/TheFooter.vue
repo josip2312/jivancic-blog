@@ -4,11 +4,14 @@
       <Github />
     </AppLink>
 
-    <AppLink class="footer-link" href="https://github.com/josip2312">
+    <AppLink
+      class="footer-link"
+      href="https://www.linkedin.com/in/josip-ivancic-b3521a1b4"
+    >
       <Linkedin />
     </AppLink>
 
-    <AppLink class="footer-link" href="https://github.com/josip2312">
+    <AppLink class="footer-link" href="https://www.instagram.com/ivancic_josip">
       <Instagram />
     </AppLink>
   </footer>

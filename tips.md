@@ -21,7 +21,7 @@ const { fullName: name } = person;
 console.log(name); // => David
 ```
 
-## Vue script setup Prop typing with default values and complex types
+## Vue script setup prop typing with default values and complex types
 
 ```vue
 <script setup lang="ts">
@@ -39,7 +39,7 @@ const props = withDefaults(defineProps<Props>(), {
   size: "md",
 });
 
-const { primary /* type: boolean */, size /* type: Size */ } = reactive(props);
+const { primary, size } = reactive(props);
 </script>
 ```
 
