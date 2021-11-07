@@ -26,7 +26,7 @@ const { title, description, href, date, tags } = reactive(props.post);
 
 <template>
   <li class="post">
-    <a :href="href" class="post-wrapper spacing">
+    <a :href="href" tabindex="-1" class="post-wrapper spacing">
       <h2 class="post-title">
         {{ title }}
       </h2>
@@ -56,6 +56,7 @@ const { title, description, href, date, tags } = reactive(props.post);
   color: var(--c-text);
 
   &-wrapper {
+    outline: none;
     display: flex;
     flex-direction: column;
     text-decoration: none;

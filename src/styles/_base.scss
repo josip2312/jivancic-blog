@@ -12,6 +12,11 @@ body {
 a,
 button {
   cursor: pointer;
+
+  &:focus {
+    outline: 2px solid var(--c-brand);
+    outline-offset: 2px;
+  }
 }
 
 ::-webkit-scrollbar {
