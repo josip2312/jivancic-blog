@@ -10,7 +10,6 @@ export default defineConfig({
   },
   plugins: [
     Components({
-      /* options */
       dts: true,
       dirs: ["src/components", ".vitepress/theme"],
     }),

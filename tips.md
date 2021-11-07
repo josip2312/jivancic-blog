@@ -1,5 +1,5 @@
 ---
-title: Tips | Josip Ivancic's blog
+title: Tips
 subtext: Programming tips
 sidebar: false
 page: true
