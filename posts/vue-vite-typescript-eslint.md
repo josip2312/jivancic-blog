@@ -12,11 +12,14 @@ import PostMeta from '@/components/PostMeta.vue'
 
 <PostMeta />
 
-> Storybook is an open source tool for building UI components and pages in isolation. It streamlines UI development, testing, and documentation, from the [official Storybook site](https://storybook.js.org/).
-
 ## Create-vue
 
-Use the repo [create-vue](https://github.com/vuejs/create-vue) to get started, this will be the official way to setup a new Vue project with Vite in the future. After running `npm init vue@next` choose the options appropriate for your use case.
+Use the repo [create-vue](https://github.com/vuejs/create-vue) to get started, this will be the official way to set up a new Vue project with Vite in the future. After running `npm init vue@next` choose the options appropriate for your use case.
+
+### Volar
+
+The first step is to enable the [Volar](https://github.com/johnsoncodehk/volar) extension and disable the [Vetur](https://github.com/vuejs/vetur) extension.
+Volar is the new recommended extension to use with Vue 3 and typescript.
 
 ### Typescript
 
@@ -28,41 +31,97 @@ If you chose the Typescript option offered by the CLI tool you should be good to
 {
   "compilerOptions": {
     ...
-    "types": [], // add this
+    "types": ["vite/cli"], // add this
   }
 }
 ```
 
 ### ESLint
 
-You will need several packages, run the commands below
+You will need several packages, run the commands below in your terminal:
 
-**ESLint**
-
-```bash
-npm i -D eslint eslint-plugin-vue
-```
-
-**Typescript**
+**ESLint**:
 
 ```bash
-npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser @vue/eslint-config-typescript # typescript specific
+npm i -D eslint eslint-plugin-vue eslint-config-prettier
 ```
 
-Next, create a `.eslintrc.js` which will look like this
+**Typescript**:
 
+```bash
+npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser @vue/eslint-config-typescript
 ```
 
+Next, create a `.eslintrc.js` which will look something like this, can be extended to fit your use case.
+
+```js
+module.exports = {
+  env: {
+    node: true,
+  },
+  globals: {
+    defineProps: "readonly",
+    defineEmits: "readonly",
+    withDefaults: "readonly",
+  },
+  extends: [
+    "@vue/typescript/recommended",
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "prettier",
+  ],
+};
 ```
 
-### Visual testing tool
+### Prettier
 
-It is also a visual testing tool, from the UI we have access to each component state, which we can verify visually.
+You can add a `.prettierrc.js` with the config that fits your needs.
 
-## Developing in isolation
+**Example config**:
 
-We can run it completely independently of our application, so for example you could have your app running on one port and Storybook on a completely different one.
-It is a purely development dependency.
-Another benefit is that it makes us build decoupled components by design, since the development is done in an isolated sandbox environment.
-This approach makes us focus on one component at a time, without the clutter of the application we are developing.
-By writing a story we are automatically documenting the props and usage guidelines for our component.
+```js
+module.exports = {
+  singleQuote: true,
+  trailingComma: "all",
+};
+```
+
+### Format on commit
+
+Read more about pre-commit hooks [here](https://prettier.io/docs/en/precommit.html).
+
+In your terminal run the command:
+
+```bash
+npx mrm@2 lint-staged
+```
+
+This will setup a precommit hook with [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged).
+
+You will see a new entry in your `package.json`
+
+```json
+"lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+```
+
+You can also easily set up hooks to run on pre-push, learn more about this on the husky and lint-staged repos.
+
+I will adjust the config to be:
+
+```json
+"lint-staged": {
+    "*.{js,vue}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "*.{scss, css, md}": [
+      "prettier --write"
+    ]
+  }
+```
+
+So every staged `.js` or `.vue` file gets formatted, then fixed with ESLint.
+
+Every `.css`, `.scss`, and `.md` file will just get formatted.
