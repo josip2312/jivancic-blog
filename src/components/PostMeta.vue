@@ -40,32 +40,23 @@ const { frontmatter } = useData();
   margin-top: 1.5rem;
 }
 .heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-bottom: 1.5rem;
 
   .article-title {
-    margin: 0 0.5rem 0.25rem 0;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
   }
 
   .date {
     font-size: 0.875rem;
     white-space: nowrap;
-    color: var(--c-text-light);
+    color: var(--c-text-lighter);
     margin: 0;
     margin-top: 0.25rem;
 
     &-time {
       margin: 0;
-    }
-  }
-
-  @include mq-small {
-    flex-direction: row;
-
-    .article-title {
-      margin-bottom: 0;
     }
   }
 }
