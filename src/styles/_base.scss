@@ -9,6 +9,13 @@ body {
   transition: background-color 150ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
+button {
+  font: inherit;
+  color: inherit;
+  background-color: none;
+  border: 0;
+}
+
 a,
 button {
   cursor: pointer;
