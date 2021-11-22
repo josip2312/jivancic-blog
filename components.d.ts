@@ -8,6 +8,7 @@ declare module 'vue' {
     AppHome: typeof import('./src/components/AppHome.vue')['default']
     AppLink: typeof import('./src/components/AppLink.vue')['default']
     AppNavigation: typeof import('./src/components/AppNavigation.vue')['default']
+    AppTag: typeof import('./src/components/AppTag.vue')['default']
     AppTips: typeof import('./src/components/AppTips.vue')['default']
     ArrowLeft: typeof import('./src/components/icons/ArrowLeft.vue')['default']
     ArrowRight: typeof import('./src/components/icons/ArrowRight.vue')['default']
