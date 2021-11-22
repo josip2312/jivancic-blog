@@ -3,18 +3,16 @@ title: Vue 3 and Vite with typescript and tooling
 date: 2021-11-03
 author: Josip Ivancic
 description: How to setup typescript, linting, and prettier in your next Vue and Vite project
-tags: ["vue", "vite", "typescript", "eslint"]
+tags: ["vue", "vite", "typescript"]
 ---
 
 <script setup>
 import PostMeta from '@/components/PostMeta.vue'
 </script>
 
-<PostMeta />
+<PostMeta repo="https://github.com/josip2312/vue-ts-eslint-template"/>
 
 ## Create-vue
-
-See full example on repo: [vue-ts-eslint-template](https://github.com/josip2312/vue-ts-eslint-template).
 
 Use the repo [create-vue](https://github.com/vuejs/create-vue) to get started, this will be the official way to set up a new Vue project with Vite in the future. After running `npm init vue@next` choose the options appropriate for your use case.
 
