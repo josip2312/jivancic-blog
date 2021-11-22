@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, PropType } from "vue";
+import { reactive } from "vue";
 
 interface Date {
   string: string;
@@ -14,38 +14,39 @@ interface Post {
   tags: string[];
 }
 
-const props = defineProps({
-  post: {
-    type: Object as PropType<Post>,
-    required: true,
-  },
-});
+interface Props {
+  post: Post;
+}
+
+const props = defineProps<Props>();
 
 const { title, description, href, date, tags } = reactive(props.post);
 </script>
 
 <template>
-  <li class="post">
-    <a :href="href" tabindex="-1" class="post-wrapper spacing">
+  <li class="post spacing">
+    <a :href="href" tabindex="-1" class="post-wrapper">
       <h2 class="post-title">
         {{ title }}
       </h2>
-      <p class="post-description">
-        {{ description }}
-      </p>
-      <div class="post-tags">
-        <span v-for="tag in tags" :key="tag" class="post-tag">{{ tag }}</span>
-      </div>
-      <div class="post-footer">
-        <a :href="href" class="post-link">
-          <span class="span">Read more</span>
-          <ArrowRight />
-        </a>
-        <div class="post-date">
-          {{ date.string }}
-        </div>
-      </div>
     </a>
+    <p class="post-description">
+      {{ description }}
+    </p>
+    <div class="post-tags">
+      <AppTag v-for="tag in tags" :key="tag" tag="span" class="post-tag">
+        {{ tag }}
+      </AppTag>
+    </div>
+    <div class="post-footer">
+      <a :href="href" class="post-link">
+        <span class="span">Read more</span>
+        <ArrowRight />
+      </a>
+      <div class="post-date">
+        {{ date.string }}
+      </div>
+    </div>
   </li>
 </template>
 
@@ -55,16 +56,14 @@ const { title, description, href, date, tags } = reactive(props.post);
 .post {
   color: var(--c-text);
 
+  @include mq-small {
+    --spacing: 1.25em;
+  }
+
   &-wrapper {
     outline: none;
-    display: flex;
-    flex-direction: column;
     text-decoration: none;
     color: inherit;
-
-    @include mq-small {
-      --spacing: 1.25em;
-    }
   }
 
   &-title {
@@ -95,12 +94,8 @@ const { title, description, href, date, tags } = reactive(props.post);
 
   &-tags {
     .post-tag {
-      display: inline-block;
-      font-size: 0.875rem;
       margin-right: 1rem;
-      padding: 0.2rem 0.6rem;
       background: var(--c-bg-accent);
-      border-radius: 6px;
     }
   }
 

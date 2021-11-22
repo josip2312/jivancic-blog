@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { useData } from "vitepress";
 
+defineProps<{
+  repo?: string;
+}>();
+
 const formatDate = (date: Date) =>
   new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -30,6 +34,8 @@ const { frontmatter } = useData();
       <ArrowLeft class="icon" />
       <span> Back to home page </span>
     </a>
+    Full example on Github:
+    <AppLink :href="repo">{{ repo }}</AppLink>
   </div>
   <PostScrollTop />
 </template>
@@ -62,8 +68,10 @@ const { frontmatter } = useData();
 }
 
 .back {
+  width: fit-content;
   display: flex;
   align-items: center;
+  margin-bottom: 1.5rem;
 
   .icon {
     margin-right: 0.5rem;

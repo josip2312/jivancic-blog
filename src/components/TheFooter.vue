@@ -36,7 +36,11 @@
     padding: 0 0.5rem;
 
     .icon {
-      width: 1.5rem;
+      width: 1.25rem;
+
+      &:hover {
+        color: var(--c-brand);
+      }
     }
   }
 }
