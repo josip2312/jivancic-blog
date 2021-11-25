@@ -10,7 +10,7 @@ tags: ["vite", "typescript"]
 import PostMeta from '@/components/PostMeta.vue'
 </script>
 
-<PostMeta repo="asd"/>
+<PostMeta repo="https://github.com/josip2312/typescript-lib-vite"/>
 
 ## Why Vite
 
@@ -65,7 +65,7 @@ export { default as MyButton } from "./MyButton";
 
 Vite is a fast new build tool that is intended for modern web projects. It uses native ES modules and provides a blazing-fast dev server and hot module replacement. Learn more about it on the official [website](https://vitejs.dev/guide/).
 
-Vite is framework agnostic which means you can use it with most frontend frameworks, and the build config is pretty much the same. There is a [section](https://vitejs.dev/guide/build.html#library-mode) on the official website which describes different build modes, we are interested in the library mode build.
+Vite is framework agnostic which means you can use it with most frontend frameworks, and the build config is pretty much the same. There is a [section](https://vitejs.dev/guide/build.html#library-mode) on the official website which describes different build modes, our interest is in the library mode build.
 
 So we need to add the following to our `vite.config.ts` (or `.js`).
 
@@ -139,7 +139,7 @@ This command provides us with a zipped file that we can map to the library depen
 
 ```json
  "dependencies": {
-    "my-component-lib": "my-component-lib-0.0.0.tgz"
+ "my-component-lib": "my-component-lib-0.0.0.tgz"
   },
 ```
 
@@ -189,7 +189,7 @@ Lastly, set the path for the type declarations inside `package.json`
 
 The last command in the build script moves the types to a `types` directory, by default they would be in a `src` directory since that is our target inside the `tsconfig`.
 
-Now if you repeat the build and pack process, there should not be a type error.
+If you now repeat the build and pack process, the type error should not be there.
 
 > If it's still there try deleting your `node_modules` and `package.lock.json` and installing the packages again.
 
