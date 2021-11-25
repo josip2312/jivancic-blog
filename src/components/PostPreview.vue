@@ -55,10 +55,7 @@ const { title, description, href, date, tags } = reactive(props.post);
 
 .post {
   color: var(--c-text);
-
-  @include mq-small {
-    --spacing: 1.25em;
-  }
+  --spacing: 1.25em;
 
   &-wrapper {
     outline: none;
