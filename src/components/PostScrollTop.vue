@@ -17,6 +17,9 @@ const scrollToTop = () => window.scrollTo(0, 0);
   border: none;
   padding: 0.6rem;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .icon {
     width: 1.5rem;
   }
