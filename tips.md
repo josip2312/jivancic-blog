@@ -21,6 +21,16 @@ const { fullName: name } = person;
 console.log(name); // => David
 ```
 
+## Import and re-export a default export in a single line
+
+```js
+// utilities/index.js
+export { default as dates } from "./dates";
+
+// in another file
+import { dates } from "<some-path>/utilities";
+```
+
 ## Vue script setup prop typing with default values and complex types
 
 ```vue
