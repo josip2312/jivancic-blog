@@ -3,7 +3,9 @@ const scrollToTop = () => window.scrollTo(0, 0);
 </script>
 
 <template>
-  <button class="scroll" @click="scrollToTop"><ChevronUp /></button>
+  <button title="Scroll to top" class="scroll" @click="scrollToTop">
+    <ChevronUp />
+  </button>
 </template>
 
 <style lang="scss" scoped>

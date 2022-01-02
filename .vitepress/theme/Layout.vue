@@ -42,6 +42,10 @@ const isPage = computed(() => frontmatter.value.page);
   height: 100vh;
 }
 
+.page .container {
+  max-width: 45rem;
+}
+
 // when not on article
 .index.page {
   .container {

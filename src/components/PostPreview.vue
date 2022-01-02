@@ -12,6 +12,7 @@ interface Post {
   href: string;
   date: Date;
   tags: string[];
+  category: string;
 }
 
 interface Props {

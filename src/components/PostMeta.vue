@@ -34,8 +34,10 @@ const { frontmatter } = useData();
       <ArrowLeft class="icon" />
       <span> Back to home page </span>
     </a>
-    Full example on Github:
-    <AppLink :href="repo">{{ repo }}</AppLink>
+    <div v-if="repo">
+      Full example on Github:
+      <AppLink :href="repo">{{ repo }}</AppLink>
+    </div>
   </div>
   <PostScrollTop />
 </template>

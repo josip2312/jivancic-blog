@@ -24,19 +24,13 @@
       </p>
       <p>
         You can find me on
-        <AppLink href="https://github.com/josip2312"> Github, </AppLink>
-        <AppLink href="https://www.linkedin.com/in/josip-ivancic-b3521a1b4">
-          LinkedIn </AppLink
-        >, and
-        <AppLink href="https://www.instagram.com/ivancic_josip">
-          Instagram
-        </AppLink>
+        <AppLink href="https://github.com/josip2312">Github,</AppLink>
+        <AppLink href="https://www.linkedin.com/in/josip-ivancic-b3521a1b4">LinkedIn</AppLink>, and
+        <AppLink href="https://www.instagram.com/ivancic_josip">Instagram</AppLink>
       </p>
       <p>
         Contact me at
-        <AppLink href="mailto:josip.ivancic23@gmail.com">
-          josip.ivancic23@gmail.com
-        </AppLink>
+        <AppLink href="mailto:josip.ivancic23@gmail.com">josip.ivancic23@gmail.com</AppLink>
       </p>
     </div>
   </div>
