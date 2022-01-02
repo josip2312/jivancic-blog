@@ -2,6 +2,15 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 85%;
+
+  @include mq-x-small {
+    font-size: 92.5%;
+  }
+
+  @include mq-small {
+    font-size: 100%;
+  }
 }
 
 body {

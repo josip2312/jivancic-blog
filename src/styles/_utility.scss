@@ -13,7 +13,7 @@
 }
 
 .title {
-  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
   margin-bottom: 2rem;
 
   @include mq-small {
