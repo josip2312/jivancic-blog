@@ -56,7 +56,7 @@ const { title, description, href, date, tags } = reactive(props.post);
 
 .post {
   color: var(--c-text);
-  --spacing: 1.25em;
+  --spacing: 1.5em;
 
   &-wrapper {
     outline: none;
