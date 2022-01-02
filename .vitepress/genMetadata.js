@@ -1,4 +1,3 @@
-// @ts-check
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
@@ -16,12 +15,14 @@ function getPost(file, postDir) {
 
   const src = fs.readFileSync(fullPath, "utf-8");
   const { data } = matter(src);
+
   const post = {
     title: data.title,
     href: `/posts/${file.replace(/\.md$/, ".html")}`,
     description: data.description,
     date: formatDate(data.date),
     tags: data.tags,
+    category: data.category,
   };
 
   cache.set(fullPath, {
@@ -72,7 +73,6 @@ async function watchPosts() {
   }
 
   const CheapWatch = require("cheap-watch");
-  // @ts-ignore
   const watcher = new CheapWatch({
     dir: path.resolve(__dirname, "../posts"),
     filter: ({ path }) => path.endsWith(".md"),
