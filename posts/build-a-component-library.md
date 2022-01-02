@@ -2,7 +2,7 @@
 title: Build a typescript component library with Vite
 date: 2021-11-14
 author: Josip Ivancic
-description: How to set up the build step for your next component library
+description: How to set up the build step for your next component library.
 tags: ["vite", "typescript"]
 category: technical
 ---
