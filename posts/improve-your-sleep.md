@@ -1,8 +1,8 @@
 ---
 title: Improve your sleep
-date: 2021-11-28
+date: 2022-01-02
 author: Josip Ivancic
-description: Exploring why you should care about your sleep and science-based tips for improving your sleep quality.
+description: Exploring why you should care about your sleep and some science-based tips for improving your sleep quality.
 tags: ["health", "lifestyle", "habits"]
 category: non-technical
 ---
