@@ -11,20 +11,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.2.0",
-    "@typescript-eslint/parser": "^5.2.0",
-    "@vue/eslint-config-typescript": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.4",
+    "@typescript-eslint/parser": "^5.30.4",
+    "@vue/eslint-config-typescript": "^11.0.0",
     "cheap-watch": "^1.0.4",
-    "eslint": "^8.1.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^7.20.0",
     "gray-matter": "^4.0.3",
-    "sass": "^1.43.3",
-    "typescript": "^4.4.4",
-    "unplugin-vue-components": "^0.17.0",
-    "vitepress": "^0.20.9"
+    "sass": "^1.53.0",
+    "typescript": "^4.7.4",
+    "unplugin-vue-components": "^0.21.0",
+    "vitepress": "^0.22.4"
   },
   "dependencies": {
-    "@vueuse/core": "^6.7.4"
+    "@vueuse/core": "^8.7.5"
   }
 }
