@@ -22,6 +22,7 @@ const ariaMessage = computed(
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 
   background: none;
   border: none;

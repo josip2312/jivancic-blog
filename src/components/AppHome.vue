@@ -3,7 +3,7 @@ import { ref, computed, onUnmounted } from "vue";
 import postsData from "../../.vitepress/metadata.json";
 
 const categories = ["Technical", "Non-technical"];
-let chosenCategory = ref(window.location.hash.split("#")[1] || "Technical");
+let chosenCategory = ref(window.location.hash.split("#")[1] || categories[0]);
 
 const posts = computed(() => {
   return postsData.filter(
@@ -23,7 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <h1 class="h1 title">My posts</h1>
+  <h1 class="h1 title">Posts</h1>
   <div class="categories">
     <a
       v-for="category in categories"
@@ -43,35 +43,23 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .categories {
   display: flex;
-  font-size: 1.65rem;
-  margin-bottom: 2.5rem;
-
-  & > * + * {
-    padding-left: 0.75rem;
-    margin-left: 1.5rem;
-  }
+  font-size: 1.35rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 
   .category {
     position: relative;
     font-weight: bold;
-    color: var(--c-text-lightest);
+    color: var(--c-text-lighter);
     text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10rem;
     transition: color 125ms ease-out;
 
-    &:not(:last-child) {
-      &::after {
-        content: "";
-        position: absolute;
-        right: -1.25rem;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        height: 100%;
-        background-color: var(--c-bg-accent-2);
-      }
-    }
-
     &.active {
+      background-color: var(--c-bg-accent);
       color: var(--c-text);
     }
   }

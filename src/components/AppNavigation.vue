@@ -1,51 +1,71 @@
+<script setup lang="ts">
+import { computed } from "vue";
+import { useData } from "vitepress";
+const { page } = useData();
+
+const pageTitle = computed(() => page.value.title);
+
+const navItems = [
+  {
+    title: "Posts",
+    href: "/",
+  },
+  {
+    title: "Tips",
+    href: "/tips",
+  },
+  {
+    title: "About",
+    href: "/about",
+  },
+];
+</script>
+
 <template>
   <ul class="nav-list">
-    <li class="nav-list-item">
-      <a class="nav-list-link" href="/">Home</a>
-    </li>
-    <li class="nav-list-item">
-      <a class="nav-list-link" href="/tips">Tips</a>
-    </li>
-    <li class="nav-list-item">
-      <a class="nav-list-link" href="/about">About me</a>
+    <li v-for="{ title, href } in navItems" :key="title" class="nav-list-item">
+      <a
+        class="nav-list-link"
+        :class="{ active: pageTitle.includes(title) }"
+        :href="href"
+        >{{ title }}</a
+      >
     </li>
   </ul>
 </template>
 
 <style lang="scss" scoped>
 .nav-list {
+  --offset-left: 0.2rem;
   font-size: 1.25rem;
-  padding: 0;
-  padding-top: 1rem;
 
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0;
   list-style: none;
 
   &-link {
-    padding-top: 0.25rem;
-    padding-left: 1.5rem;
     display: block;
-    color: var(--c-text);
+    padding: 0.75rem 0.5rem 0;
+    color: var(--c-text-light);
+
+    &.active {
+      color: var(--c-text);
+    }
+  }
+
+  &-link {
+    padding: 0.25rem 0.5rem;
   }
 
   & > * + * {
-    margin-top: 0.5rem;
+    margin-left: var(--offset-left);
   }
 
   @media screen and(min-width: 720px) {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    padding-top: 0;
-    margin-right: 1.5rem;
-
-    &-link {
-      padding: 0;
-    }
-
-    & > * + * {
-      margin-top: 0;
-      margin-left: 1.5rem;
-    }
+    --offset-left: 1rem;
+    margin-right: 1rem;
   }
 }
 </style>

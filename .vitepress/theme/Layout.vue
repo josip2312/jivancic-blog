@@ -12,9 +12,6 @@ const isPage = computed(() => frontmatter.value.page);
 <template>
   <div class="index" :class="{ page: isPage }">
     <Layout>
-      <template #sidebar-top v-if="isPage">
-        <AppNavigation />
-      </template>
       <template #navbar-search>
         <AppNavigation class="desktop-nav" />
         <DarkMode />
@@ -27,12 +24,18 @@ const isPage = computed(() => frontmatter.value.page);
 <style lang="scss">
 @use "@/styles/mixins" as *;
 
-.desktop-nav {
-  display: none;
+.no-sidebar {
+  .sidebar-button {
+    display: none;
+  }
 
-  @include mq-small {
-    display: flex;
-    align-items: center;
+  .nav-bar {
+    padding-left: 1.5rem !important;
+
+    &-title {
+      font-size: 1.3rem;
+      white-space: nowrap;
+    }
   }
 }
 
