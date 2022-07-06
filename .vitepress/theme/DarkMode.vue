@@ -12,8 +12,8 @@ const ariaMessage = computed(
 
 <template>
   <button class="dark-mode" @click="toggleDark()" :aria-label="ariaMessage">
-    <Dark v-if="!isDark" />
-    <Light v-else />
+    <Light v-if="isDark" />
+    <Dark v-else />
   </button>
 </template>
 
