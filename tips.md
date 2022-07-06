@@ -11,6 +11,33 @@ page: true
 
 <AppTips />
 
+## Using enums as prop types
+
+```js
+import { toRefs } from "vue";
+
+enum ButtonSize {
+  Small = 'sm',
+  Medium = 'md',
+  Large = 'lg',
+};
+
+interface Props {
+  primary?: boolean;
+  size?: ButtonSize;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  primary: false,
+  size: ButtonSize.Medium,
+});
+
+const { primary, size } = toRefs(props);
+
+// when using it
+<ButtonComp :size="ButtonSize.Medium"> Button </ButtonComp>
+```
+
 ## Destructuring with assignment
 
 ```js
@@ -35,7 +62,7 @@ import { dates } from "<some-path>/utilities";
 
 ```vue
 <script setup lang="ts">
-import { reactive } from "vue";
+import { toRefs } from "vue";
 
 type Size = "sm" | "md" | "lg";
 
@@ -49,7 +76,7 @@ const props = withDefaults(defineProps<Props>(), {
   size: "md",
 });
 
-const { primary, size } = reactive(props);
+const { primary, size } = toRefs(props);
 </script>
 ```
 
