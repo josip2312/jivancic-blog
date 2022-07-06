@@ -31,12 +31,25 @@ const isPage = computed(() => frontmatter.value.page);
 
   .nav-bar {
     padding-left: 1.5rem !important;
-
-    &-title {
-      font-size: 1.3rem;
-      white-space: nowrap;
-    }
   }
+}
+
+.nav-bar {
+  padding-left: 3.35rem !important;
+  padding-right: 1rem !important;
+
+  @include mq-small {
+    padding-left: 1.5rem !important;
+  }
+
+  .sidebar-button {
+    left: 0.75rem;
+  }
+}
+
+.nav-bar-title {
+  font-size: 1.25rem;
+  white-space: nowrap;
 }
 
 .index {
