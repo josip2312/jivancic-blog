@@ -3,7 +3,7 @@ import { ref, computed, onUnmounted } from "vue";
 import postsData from "../../.vitepress/metadata.json";
 
 const categories = ["Technical", "Non-technical"];
-let chosenCategory = ref(window.location.hash.split("#")[1] || categories[0]);
+const chosenCategory = ref(window.location.hash.split("#")[1] || categories[0]);
 
 const posts = computed(() => {
   return postsData.filter(
@@ -43,7 +43,7 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .categories {
   display: flex;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
 
@@ -52,9 +52,9 @@ onUnmounted(() => {
     font-weight: bold;
     color: var(--c-text-lighter);
     text-decoration: none;
-    padding: 0.75rem 1.25rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    padding: 0.65rem 1.15rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
     border-radius: 10rem;
     transition: color 125ms ease-out;
 
