@@ -36,7 +36,7 @@ const navItems = [
 
 <style lang="scss" scoped>
 .nav-list {
-  --offset-left: 0.2rem;
+  --offset-left: 0.3rem;
   font-size: 1.25rem;
 
   display: flex;
@@ -47,16 +47,12 @@ const navItems = [
 
   &-link {
     display: block;
-    padding: 0.75rem 0.5rem 0;
+    padding: 0.25rem;
     color: var(--c-text-light);
 
     &.active {
       color: var(--c-text);
     }
-  }
-
-  &-link {
-    padding: 0.25rem 0.5rem;
   }
 
   & > * + * {
@@ -66,6 +62,10 @@ const navItems = [
   @media screen and(min-width: 720px) {
     --offset-left: 1rem;
     margin-right: 1rem;
+
+    &-link {
+      padding: 0.25rem 0.25rem;
+    }
   }
 }
 </style>
