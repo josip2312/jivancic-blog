@@ -79,7 +79,7 @@ It's not that the people who worked on this were incapable of making it more rea
 
 **By being a person who puts effort into his craft, you can get into that smaller pool of highly valuable individuals.**
 
-So in developer terms, this kind of effort would include: ruthlessly refactoring, paying attention to variable names, using minimal amounts of comments while trying to convey the meaning through the code itself, etc. To quote a famous software engineer Grady Booch: “Clean code reads like well-written prose... “.
+So in developer terms, this kind of effort would include: ruthlessly refactoring, paying attention to variable names, using minimal amounts of comments while trying to convey the meaning through the code itself, etc. To quote a famous software engineer Grady Booch: “_Clean code reads like well-written prose..._“.
 
 ### Develop your social skills
 
@@ -91,7 +91,7 @@ For example, your suggestions and proposed solutions will be taken into consider
 
 ### Conclusion
 
-These are some of the things I have noticed throughout the last 19 months of working in a large software development company. Following these principles allowed me to make progress quickly and be appreciated for the efforts I put in. I consider these points more as observations rather than advice because everyone's situation is different. I hope you will take something from this and apply it to _your_ particular case.
+These are some of the things I have noticed throughout the last year and a half working in a large software development company. Following these principles allowed me to make progress quickly and be appreciated for the efforts I put in. I consider these points more as observations rather than advice because everyone's situation is different. I hope you will take something from this and apply it to _your_ particular case.
 
 #### Sources
 
