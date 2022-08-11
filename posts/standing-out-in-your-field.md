@@ -65,7 +65,7 @@ So you work less and accomplish more. The price you pay is not spending time min
 This part seems difficult if you're in the start of your career, but don't let this mislead you. To quote the psychologist Jordan Peterson, “_Notice that opportunity lurks where responsibility has been abdicated_”.
 
 By being a person who intentionally wants to do more and be more involved in the decision-making processes of the business you're involved in, you can not only learn a lot but become a much more valuable employee. 
-As a result of taking more responsibility you will also gain authority, since these two are closely related.
+As a result of taking more responsibility, you will also gain authority, since these two are closely related.
 
 Don't sell yourself short by thinking you need some “_special_” skill to handle more responsibility. Leaning into this will help you advance more quickly and build confidence for dealing with even more things in the future.
 
@@ -88,6 +88,8 @@ Don't fall into the trap of thinking things like: “_I'm a computer guy therefo
 Having effective social skills will most definitely make you more capable in almost all aspects of a particular career.
 
 For example, your suggestions and proposed solutions will be taken into consideration. You will be better able to convey information to others, and things will get done more quickly. This is because it will be easier to agree about who does what and so on.
+
+Another point is that you will be better able to discuss and negotiate your salary, as well as the general satisfaction with your current position.
 
 ### Conclusion
 
