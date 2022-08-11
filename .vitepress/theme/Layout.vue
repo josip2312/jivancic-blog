@@ -35,6 +35,7 @@ const isPage = computed(() => frontmatter.value.page);
 }
 
 .nav-bar {
+  line-height: 1.25;
   padding-left: 3.35rem !important;
   padding-right: 1rem !important;
 
@@ -43,13 +44,18 @@ const isPage = computed(() => frontmatter.value.page);
   }
 
   .sidebar-button {
+    top: auto;
     left: 0.75rem;
   }
 }
 
 .nav-bar-title {
-  font-size: 1.25rem;
+  font-size: 1.15rem !important;
   white-space: nowrap;
+
+  @include mq-small {
+    font-size: 1.25rem !important;
+  }
 }
 
 .index {
