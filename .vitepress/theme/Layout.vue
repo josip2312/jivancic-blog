@@ -17,6 +17,10 @@ const isPost = computed(() => !!frontmatter.value.category);
 </template>
 
 <style lang="scss">
+.post {
+  overflow-x: hidden;
+}
+
 .post .content {
   max-width: 45rem !important;
 }
