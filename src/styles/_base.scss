@@ -13,12 +13,6 @@ html {
   }
 }
 
-body {
-  font-size: 1rem;
-  overflow-x: hidden;
-  transition: background-color 150ms cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
 button {
   font: inherit;
   color: inherit;
@@ -31,7 +25,7 @@ button {
   cursor: pointer;
 
   &:focus-visible {
-    outline: 2px solid var(--c-brand);
+    outline: 2px solid var(--vp-c-brand);
     outline-offset: 2px;
   }
 }
@@ -45,7 +39,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--c-bg);
+  background-color: var(--vp-c-bg);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -54,5 +48,5 @@ h1 {
 }
 
 html {
-  scrollbar-color: var(--c-scrollbar) var(--c-bg);
+  scrollbar-color: var(--c-scrollbar) var(--vp-c-bg);
 }
