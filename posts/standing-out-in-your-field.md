@@ -3,7 +3,7 @@ title: Standing out in your field
 date: 2022-08-11
 author: Josip Ivancic
 description: Observations on practical things you can do to stand out in your field of work.
-tags: ["lifestyle", "productivity"]
+tags: ['lifestyle', 'productivity']
 category: non-technical
 ---
 
@@ -21,7 +21,7 @@ Getting in the top 10% of the most competent people in your company or local are
 
 I will use examples from software development since it is my area of expertise.
 
-### Learn and discover new things
+## Learn and discover new things
 
 A common trend I have noticed in most developers (and in other occupations) is that getting a secure job diminishes the curiosity and drive to learn new things.
 
@@ -29,7 +29,7 @@ Let's assume you are fairly competent in your field. There is almost certainly a
 
 Having a full-time job may mean you don't have as much time to improve your skills as you did before your employment, but investing even a small amount of time consistently can make a big difference.
 
-### Focus on the work
+## Focus on the work
 
 How many times have you done something only to end up frantically checking your email, messages, or reading random news websites?
 
@@ -60,7 +60,7 @@ A study has shown that most people are productive for about 2 hours and 53 minut
 By removing these distractions deliberately and working with real focus, you will find that you can get much more work done in a shorter amount of time. This kind of focused work itself is a skill you can train.
 So you work less and accomplish more. The price you pay is not spending time mindlessly scrolling through various social media or random websites, seems like a win-win.
 
-### Take on responsibility
+## Take on responsibility
 
 This part seems difficult if you're in the start of your career, but don't let this mislead you. To quote the psychologist Jordan Peterson, “_Notice that opportunity lurks where responsibility has been abdicated_”.
 
@@ -71,7 +71,7 @@ Don't sell yourself short by thinking you need some “_special_” skill to han
 
 Distinguish yourself as a person willing to take part in key decisions. A certain amount of risk is involved, but it's difficult to make significant progress without it.
 
-### Put effort into what you do
+## Put effort into what you do
 
 Let's take an example from software development. Were you ever assigned an older project to improve something and got frustrated?
 
@@ -81,7 +81,7 @@ It's not that the people who worked on this were incapable of making it more rea
 
 So in developer terms, this kind of effort would include: ruthlessly refactoring, paying attention to variable names, using minimal amounts of comments while trying to convey the meaning through the code itself, etc. To quote a famous software engineer Grady Booch: “_Clean code reads like well-written prose..._“.
 
-### Develop your social skills
+## Develop your social skills
 
 Don't fall into the trap of thinking things like: “_I'm a computer guy therefore I don't know how to speak to people_”. Any kind of mindset that puts you into a particular "_box_" is not in any way useful and limits your capabilities.
 
@@ -91,11 +91,11 @@ For example, your suggestions and proposed solutions will be taken into consider
 
 Another point is that you will be better able to discuss and negotiate your salary, as well as the general satisfaction with your current position.
 
-### Conclusion
+## Conclusion
 
 These are some of the things I have noticed throughout the last year and a half working in a large software development company. Following these principles allowed me to make progress quickly and be appreciated for the efforts I put in. I consider these points more as observations rather than advice because everyone's situation is different. I hope you will take something from this and apply it to _your_ particular case.
 
-#### Sources
+## Sources
 
 https://www.vouchercloud.com/resources/office-worker-productivity
 
