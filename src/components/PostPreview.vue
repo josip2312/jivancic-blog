@@ -55,7 +55,6 @@ const { title, description, href, date, tags } = reactive(props.post);
 @use "@/styles/mixins" as *;
 
 .post {
-  color: var(--c-text);
   --spacing: 1.5em;
 
   &-wrapper {
@@ -65,10 +64,9 @@ const { title, description, href, date, tags } = reactive(props.post);
   }
 
   &-title {
-    border-bottom: 0;
     margin-top: 0;
-    margin-bottom: 1rem;
-    padding: 0;
+    padding-top: 1rem;
+    border-top: none;
   }
 
   &-description {
@@ -81,19 +79,19 @@ const { title, description, href, date, tags } = reactive(props.post);
     }
   }
 
+  &-date {
+    color: var(--c-text-light);
+  }
+
   &-footer {
     display: flex;
     justify-content: space-between;
   }
 
-  &-date {
-    color: var(--c-text-light);
-  }
-
   &-tags {
     .post-tag {
       margin-right: 1rem;
-      background: var(--c-bg-accent);
+      background: var(--vp-c-bg-soft);
     }
   }
 

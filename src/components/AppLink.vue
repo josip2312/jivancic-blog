@@ -9,9 +9,13 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <a :href="href" target="_blank" rel="noopener">
+  <a class="link" :href="href" target="_blank" rel="noopener">
     <slot />
   </a>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.link {
+  font-weight: 500;
+}
+</style>

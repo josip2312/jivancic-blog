@@ -14,14 +14,14 @@ const scrollToTop = () => window.scrollTo(0, 0);
   z-index: 10;
   bottom: 1rem;
   right: 1rem;
-  color: var(--c-text);
-  background-color: var(--c-bg-accent);
+  background-color: var(--vp-c-bg-mute);
   border: none;
   padding: 0.6rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+
   .icon {
     width: 1.5rem;
   }
