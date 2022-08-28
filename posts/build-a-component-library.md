@@ -3,7 +3,7 @@ title: Build a typescript component library with Vite
 date: 2021-11-14
 author: Josip Ivancic
 description: How to set up the build step for your next component library.
-tags: ["vite", "typescript"]
+tags: ['vite', 'typescript']
 category: technical
 ---
 
@@ -17,7 +17,7 @@ import PostMeta from '@/components/PostMeta.vue'
 
 Vite ships with a pre-configured build command that has many performance optimizations out of the box. It uses [Rollup](https://rollupjs.org/guide/en/) under the hood and provides an abstraction over the default rollup configuration. This makes it way easier to set up the build step without knowing all the internals of rollup.
 
-### Components
+## Components
 
 For the sake of the example, I'm going to create a simple button component, but the build step remains the same for any number of components. In this example, I'm using the `<script setup>` syntax.
 
@@ -25,7 +25,7 @@ Component code:
 
 ```vue
 <script setup lang="ts">
-import { reactive } from "vue";
+import { reactive } from 'vue';
 
 interface Props {
   primary?: boolean;
@@ -59,10 +59,10 @@ Next, I'm going to create the entry file for the library where all the component
 
 ```ts
 // src/index.ts
-export { default as MyButton } from "./MyButton";
+export { default as MyButton } from './MyButton';
 ```
 
-### Vite config
+## Vite config
 
 Vite is a fast new build tool that is intended for modern web projects. It uses native ES modules and provides a blazing-fast dev server and hot module replacement. Learn more about it on the official [website](https://vitejs.dev/guide/).
 
@@ -72,25 +72,25 @@ So we need to add the following to our `vite.config.ts` (or `.js`).
 
 ```js
 // vite.config.ts
-const path = require("path");
-const { defineConfig } = require("vite");
+const path = require('path');
+const { defineConfig } = require('vite');
 
 module.exports = defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
-      name: "MyComponentLib",
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'MyComponentLib',
       fileName: (format) => `my-component-lib.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ["vue"],
+      external: ['vue'],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
-          vue: "Vue",
+          vue: 'Vue',
         },
       },
     },
@@ -106,7 +106,7 @@ If you now run `npm run build` you should get the output in the `dist` folder.
 npm i -D @types/node
 ```
 
-### Package.json config
+## Package.json config
 
 Before testing our build output we need to configure the `package.json` to point at correct built files. We are defining the entry point to the library.
 You can learn more about what each option does by hovering the properties in VS Code.
@@ -126,7 +126,7 @@ You can learn more about what each option does by hovering the properties in VS 
 }
 ```
 
-### Test build output
+## Test build output
 
 To test the library locally we can zip the dist file, before running the below change the `name` field in your `package.json` to your preferred library name.
 
@@ -150,14 +150,14 @@ After importing the library it should now work.
 
 ```vue
 <script setup lang="ts">
-import { MyButton } from "my-component-lib";
-import "/node_modules/my-component-lib/dist/style.css";
+import { MyButton } from 'my-component-lib';
+import '/node_modules/my-component-lib/dist/style.css';
 </script>
 ```
 
 However, you'll notice we get an error regarding missing declaration files, we will solve this in the next step.
 
-### Typescript declarations
+## Typescript declarations
 
 To solve the typescript declarations error, we need to generate type declaration files for the components. We will do this using the `vue-tsc` package.
 
@@ -194,7 +194,7 @@ If you now repeat the build and pack process, the type error should not be there
 
 > If it's still there try deleting your `node_modules` and `package.lock.json` and installing the packages again.
 
-### Publish to npm
+## Publish to npm
 
 Everything is already set up for publishing, you can just authenticate with npm and publish.
 
@@ -204,6 +204,6 @@ npm login # authenticate
 npm publish # publish
 ```
 
-### Conclusion
+## Conclusion
 
 Vite makes it incredibly easy to build a component library with a very slim config. Coupled with the amazing development experience it provides I can conclude it is the next big thing in frontend development.
