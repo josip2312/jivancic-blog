@@ -10,7 +10,6 @@ module.exports = {
     theme: 'github-dark',
     lineNumbers: true,
   },
-
   themeConfig: {
     nav: [
       { text: 'Posts', link: '/' },
