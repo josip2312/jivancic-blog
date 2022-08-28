@@ -23,7 +23,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <h1 class="h1 title">Posts</h1>
+  <AppHeading>
+    Posts
+  </AppHeading>
   <div class="categories">
     <a
       v-for="category in categories"
@@ -43,24 +45,23 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .categories {
   display: flex;
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
   flex-wrap: wrap;
 
   .category {
     position: relative;
     font-weight: bold;
-    color: var(--c-text-lighter);
+    color: var(--vp-c-text-2);
     text-decoration: none;
     padding: 0.65rem 1.15rem;
     margin-right: 0.75rem;
     margin-bottom: 0.75rem;
     border-radius: 10rem;
-    transition: color 125ms ease-out;
+    transition: background-color 125ms ease-out;
 
     &.active {
-      background-color: var(--c-bg-accent);
-      color: var(--c-text);
+      background-color: var(--vp-c-bg-mute);
+      color: var(--vp-c-text-1);
     }
   }
 }
@@ -72,9 +73,9 @@ onUnmounted(() => {
   line-height: 1.4;
 
   & > * + * {
-    padding-top: 2rem;
-    margin-top: 2rem;
-    border-top: thin solid var(--c-divider);
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    border-top: thin solid var(--vp-c-divider-light);
   }
 }
 </style>

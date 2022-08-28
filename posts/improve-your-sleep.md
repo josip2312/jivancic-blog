@@ -3,7 +3,7 @@ title: Improve your sleep
 date: 2022-01-02
 author: Josip Ivancic
 description: Exploring why you should care about your sleep and some science-based tips for improving your sleep quality.
-tags: ["health", "lifestyle", "habits"]
+tags: ['health', 'lifestyle', 'habits']
 category: non-technical
 ---
 
@@ -25,7 +25,7 @@ Low-quality sleep is associated with various health-detrimental effects such as 
 
 Below are the points that seem to make the most impact on good sleep:
 
-### Consistent sleeping schedule
+## Consistent sleeping schedule
 
 A consistent sleeping schedule will make you wake up and fall asleep more easily.
 
@@ -37,7 +37,7 @@ The primary affectors of your clock are light exposure, food, and physical activ
 
 **Find a schedule that works for you and stick to it.**
 
-### Early morning sunlight
+## Early morning sunlight
 
 View sunlight within an hour of waking up, or if you wake up really early, as soon as the sun comes out.
 
@@ -49,7 +49,7 @@ Depending on how bright it is, you might need more or less light, but about 10 m
 
 **Take a short 10-30 minute walk in the morning.**
 
-### Avoid bright lights at night
+## Avoid bright lights at night
 
 Following the logic from the previous point, getting light into your eyes at night will make you more alert and disrupt your inner clock. Since the body's main mechanism for determining the time of day is through your eyes, the body will think it is daytime, and therefore you will have a hard time falling asleep.
 
@@ -59,7 +59,7 @@ Light emitted by fire does not have this effect, so it could be a good idea to t
 
 **Don't use devices with screens at least an hour before bedtime and dim your lights, or ideally light a few candles.**
 
-### Eating late
+## Eating late
 
 It is best not to eat anything a few hours before going to sleep, since digestion can negatively affect sleep quality.
 
@@ -69,7 +69,7 @@ If you are not nutrient deficient you should have no problems not eating for the
 
 **The ideal time for your last meal seems to be about 3 hours before bed.**
 
-### Caffeine late in the day
+## Caffeine late in the day
 
 Avoid caffeine late in the day. Caffeine works by blocking the adenosine receptor, which is a chemical that builds up in your brain the longer you stay awake and makes you more sleepy.
 You might think caffeine does not affect you since you fall asleep just fine after a coffee in the evening, but your sleep quality is just as important, and it almost surely suffers from ingesting caffeine late in the day. These results are reproduced in every available study on caffeine and sleep.
@@ -78,13 +78,13 @@ Another tip regarding caffeine is to delay it for 90-120 minutes after waking. T
 
 **Limit your caffeine intake to the early part of the day.**
 
-### Alcohol and other drugs
+## Alcohol and other drugs
 
 Contrary to popular belief, alcohol does not make you sleep better. It can make you fall asleep faster since it acts as a sedative, but the quality of your sleep suffers. The same goes for marijuana. Both of these significantly reduce the amount of deep and REM sleep you're getting. These are the phases of sleep where you're getting the proper recovery you need.
 
 **Avoid drinking alcohol and using drugs to fall asleep.**
 
-### Relax
+## Relax
 
 Lastly, a thing I found especially useful is to relax as you approach your desired bedtime.
 Give your body a period in which it can calm itself down, without any outside stimuli.
@@ -93,11 +93,11 @@ So, finding a relaxing activity to do approaching bedtime can be extremely benef
 
 **Do relaxing activities as you approach your bedtime.**
 
-### Conclusion
+## Conclusion
 
 Paying attention to your sleep is something that got some real attention over the past couple of years. People are more aware of the health effects of sleep, and in general, there is a rapid increase of health information available to the general public. A lot of us do not give much attention to these topics or are simply not familiar with them, but they can truly make a huge impact on our overall well-being.
 
-#### Sources
+## Sources
 
 https://hubermanlab.com/
 

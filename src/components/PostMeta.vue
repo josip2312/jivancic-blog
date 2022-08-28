@@ -51,15 +51,15 @@ const { frontmatter } = useData();
   margin-bottom: 1.5rem;
 
   .article-title {
+    font-size: 2.35rem;
     margin: 0;
     margin-bottom: 0.75rem;
-    line-height: 1.15;
   }
 
   .date {
     font-size: 0.875rem;
     white-space: nowrap;
-    color: var(--c-text-lighter);
+    color: var(--vp-c-text-2);
     margin: 0;
     margin-top: 0.25rem;
 

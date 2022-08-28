@@ -3,7 +3,7 @@ title: Sass modules with the Vue CLI
 date: 2021-11-01
 author: Josip Ivancic
 description: How to configure webpack for sass modules and set up scalable stylesheets with Vue 3 and the Vue CLI.
-tags: ["vue", "scss", "webpack"]
+tags: ['vue', 'scss', 'webpack']
 category: technical
 ---
 
@@ -22,7 +22,7 @@ Not enough people are aware of the [announcement](https://sass-lang.com/blog/the
 The `@use` rule makes variables, mixins, and functions from another stylesheet available in the current stylesheet. It pretty much does the same thing as `@import`, but with namespacing. Example from [sass-lang.com](https://sass-lang.com/blog/the-module-system-is-launched#use-the-heart-of-the-module-systemhttps://):
 
 ```scss
-@use "bootstrap";
+@use 'bootstrap';
 
 .element {
   background-color: bootstrap.$body-bg;
@@ -33,7 +33,7 @@ The `@use` rule makes variables, mixins, and functions from another stylesheet a
 You can also explicitly set the namespace by using `as`.
 
 ```scss
-@use "bootstrap" as b;
+@use 'bootstrap' as b;
 
 .element {
   @include b.float-left;
@@ -43,7 +43,7 @@ You can also explicitly set the namespace by using `as`.
 To include everything in the top-level namespace, use the special `*` symbol.
 
 ```scss
-@use "bootstrap" as *;
+@use 'bootstrap' as *;
 
 .element {
   @include float-left;
@@ -58,8 +58,8 @@ If you had multiple partial files in a `components` folder, you would `@forward`
 
 ```scss
 // components/_index.scss
-@forward "buttons";
-@forward "tags";
+@forward 'buttons';
+@forward 'tags';
 ```
 
 Then you would `@use` the appropriate stylesheet (pointing to the folder automatically references the `_index.scss` file).
@@ -114,33 +114,33 @@ The contents of the entry files will be:
 
 ```scss
 // abstracts/_index.scss
-@forward "breakpoints";
-@forward "colors";
-@forward "font";
-@forward "mixins";
-@forward "variables";
+@forward 'breakpoints';
+@forward 'colors';
+@forward 'font';
+@forward 'mixins';
+@forward 'variables';
 ```
 
 ```scss
 // base/_index.scss
-@forward "reset";
-@forward "root";
-@forward "typography";
-@forward "base";
+@forward 'reset';
+@forward 'root';
+@forward 'typography';
+@forward 'base';
 ```
 
 ```scss
 // utilities/_index.scss
-@forward "colors";
-@forward "layout";
+@forward 'colors';
+@forward 'layout';
 ```
 
 and inside `main.scss`. Notice we are not including abstracts since they wouldn't work inside components because of the `scoped` attribute.
 
 ```scss
 // main.scss
-@use "base";
-@use "utilities";
+@use 'base';
+@use 'utilities';
 ```
 
 If we now `@use` the `main.scss` file in our `App.vue`, the styles should apply. However, if we try to use a mixin or a variable you'll notice we get an error since they aren't `@use`-d inside of our components.
@@ -173,7 +173,7 @@ If you now `@include` a media query or use a sass variable inside of your compon
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
 };
 </script>
 

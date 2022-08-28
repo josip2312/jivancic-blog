@@ -1,6 +1,6 @@
-const fs = require("fs");
-const path = require("path");
-const matter = require("gray-matter");
+const fs = require('fs');
+const path = require('path');
+const matter = require('gray-matter');
 
 const cache = new Map();
 
@@ -13,12 +13,12 @@ function getPost(file, postDir) {
     return cached.post;
   }
 
-  const src = fs.readFileSync(fullPath, "utf-8");
+  const src = fs.readFileSync(fullPath, 'utf-8');
   const { data } = matter(src);
 
   const post = {
     title: data.title,
-    href: `/posts/${file.replace(/\.md$/, ".html")}`,
+    href: `/posts/${file.replace(/\.md$/, '.html')}`,
     description: data.description,
     date: formatDate(data.date),
     tags: data.tags,
@@ -33,7 +33,7 @@ function getPost(file, postDir) {
 }
 
 function getPosts() {
-  const postDir = path.resolve(__dirname, "../posts");
+  const postDir = path.resolve(__dirname, '../posts');
   return fs
     .readdirSync(postDir)
     .map((file) => getPost(file, postDir))
@@ -47,17 +47,17 @@ function formatDate(date) {
   date.setUTCHours(12);
   return {
     time: +date,
-    string: date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
+    string: date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
     }),
   };
 }
 
 function genMetadata() {
   fs.writeFileSync(
-    path.resolve(__dirname, "metadata.json"),
+    path.resolve(__dirname, 'metadata.json'),
     JSON.stringify(getPosts())
   );
 }
@@ -65,22 +65,22 @@ function genMetadata() {
 let hasWatched = false;
 
 async function watchPosts() {
-  console.log("watch");
+  console.log('watch');
   genMetadata();
 
-  if (hasWatched || process.env.NODE_ENV === "production") {
+  if (hasWatched || process.env.NODE_ENV === 'production') {
     return;
   }
 
-  const CheapWatch = require("cheap-watch");
+  const CheapWatch = require('cheap-watch');
   const watcher = new CheapWatch({
-    dir: path.resolve(__dirname, "../posts"),
-    filter: ({ path }) => path.endsWith(".md"),
+    dir: path.resolve(__dirname, '../posts'),
+    filter: ({ path }) => path.endsWith('.md'),
     debounce: 50,
   });
   await watcher.init();
-  watcher.on("+", genMetadata);
-  watcher.on("-", genMetadata);
+  watcher.on('+', genMetadata);
+  watcher.on('-', genMetadata);
 }
 
 exports.getPosts = getPosts;

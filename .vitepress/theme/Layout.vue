@@ -1,88 +1,23 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useData } from "vitepress";
-import DefaultTheme from "vitepress/theme";
+import { computed } from 'vue';
+import { useData } from 'vitepress';
+import DefaultTheme from 'vitepress/theme';
 
 const { Layout } = DefaultTheme;
-
 const { frontmatter } = useData();
-const isPage = computed(() => frontmatter.value.page);
+
+const isCentered = computed(() => frontmatter.value.centered);
+const isPost = computed(() => !!frontmatter.value.category);
 </script>
 
 <template>
-  <div class="index" :class="{ page: isPage }">
-    <Layout>
-      <template #navbar-search>
-        <AppNavigation class="desktop-nav" />
-        <DarkMode />
-      </template>
-    </Layout>
-    <TheFooter />
+  <div class="index" :class="{ centered: isCentered, post: isPost }">
+    <Layout> </Layout>
   </div>
 </template>
 
 <style lang="scss">
-@use "@/styles/mixins" as *;
-
-.no-sidebar {
-  .sidebar-button {
-    display: none;
-  }
-
-  .nav-bar {
-    padding-left: 1.5rem !important;
-  }
-}
-
-.nav-bar {
-  line-height: 1.25;
-  padding-left: 3.35rem !important;
-  padding-right: 1rem !important;
-
-  @include mq-small {
-    padding-left: 1.5rem !important;
-  }
-
-  .sidebar-button {
-    top: auto;
-    left: 0.75rem;
-  }
-}
-
-.nav-bar-title {
-  font-size: 1.15rem !important;
-  white-space: nowrap;
-
-  @include mq-small {
-    font-size: 1.25rem !important;
-  }
-}
-
-.index {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.page .container {
-  max-width: 45rem;
-}
-
-// when not on article
-.index.page {
-  .container {
-    width: 100%;
-    max-width: 60rem;
-  }
-
-  .content,
-  .home-content {
-    padding-top: 1rem;
-    padding-bottom: 2.5rem;
-
-    @include mq-small {
-      padding-top: 2.5rem;
-    }
-  }
+.post .content {
+  max-width: 45rem !important;
 }
 </style>

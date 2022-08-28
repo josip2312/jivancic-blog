@@ -3,7 +3,7 @@ title: Vue 3 and Vite with typescript and tooling
 date: 2021-11-03
 author: Josip Ivancic
 description: How to setup typescript, linting, and prettier in your next Vue and Vite project.
-tags: ["vue", "vite", "typescript"]
+tags: ['vue', 'vite', 'typescript']
 category: technical
 ---
 
@@ -17,12 +17,12 @@ import PostMeta from '@/components/PostMeta.vue'
 
 Use the repo [create-vue](https://github.com/vuejs/create-vue) to get started, this will be the official way to set up a new Vue project with Vite in the future. After running `npm init vue@next` choose the options appropriate for your use case.
 
-### Volar
+## Volar
 
 The first step is to enable the [Volar](https://github.com/johnsoncodehk/volar) extension and disable the [Vetur](https://github.com/vuejs/vetur) extension.
 Volar is the new recommended extension to use with Vue 3 and typescript.
 
-### Typescript
+## Typescript
 
 If you chose the Typescript option offered by the CLI tool you should be good to go.
 
@@ -37,7 +37,7 @@ If you chose the Typescript option offered by the CLI tool you should be good to
 }
 ```
 
-### ESLint
+## ESLint
 
 You will need several packages, run the commands below in your terminal:
 
@@ -61,20 +61,20 @@ module.exports = {
     node: true,
   },
   globals: {
-    defineProps: "readonly",
-    defineEmits: "readonly",
-    withDefaults: "readonly",
+    defineProps: 'readonly',
+    defineEmits: 'readonly',
+    withDefaults: 'readonly',
   },
   extends: [
-    "@vue/typescript/recommended",
-    "eslint:recommended",
-    "plugin:vue/vue3-recommended",
-    "prettier",
+    '@vue/typescript/recommended',
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    'prettier',
   ],
 };
 ```
 
-### Prettier
+## Prettier
 
 You can add a `.prettierrc.js` with the config that fits your needs.
 
@@ -83,11 +83,11 @@ You can add a `.prettierrc.js` with the config that fits your needs.
 ```js
 module.exports = {
   singleQuote: true,
-  trailingComma: "all",
+  trailingComma: 'all',
 };
 ```
 
-### Format on commit
+## Format on commit
 
 Read more about pre-commit hooks [here](https://prettier.io/docs/en/precommit.html).
 

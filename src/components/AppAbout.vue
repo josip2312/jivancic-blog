@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1 class="h1 title">About me</h1>
+    <AppHeading> About me </AppHeading>
     <div class="about-content">
       <p>
         Hi, I am Josip Ivancic, a web developer working at
@@ -25,12 +25,18 @@
       <p>
         You can find me on
         <AppLink href="https://github.com/josip2312">Github,</AppLink>
-        <AppLink href="https://www.linkedin.com/in/josip-ivancic-b3521a1b4">LinkedIn</AppLink>, and
-        <AppLink href="https://www.instagram.com/ivancic_josip">Instagram</AppLink>
+        <AppLink href="https://www.linkedin.com/in/josip-ivancic-b3521a1b4"
+          >LinkedIn</AppLink
+        >, and
+        <AppLink href="https://www.instagram.com/ivancic_josip"
+          >Instagram</AppLink
+        >
       </p>
       <p>
         Contact me at
-        <AppLink href="mailto:josip.ivancic23@gmail.com">josip.ivancic23@gmail.com</AppLink>
+        <AppLink href="mailto:josip.ivancic23@gmail.com"
+          >josip.ivancic23@gmail.com</AppLink
+        >
       </p>
     </div>
   </div>
@@ -38,8 +44,7 @@
 
 <style lang="scss" scoped>
 .about-content {
-  max-width: 65ch;
-  color: var(--c-text-lighter);
+  color: var(--vp-c-text-1);
   font-size: 1.1rem;
 }
 </style>
