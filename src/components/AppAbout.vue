@@ -4,7 +4,7 @@
     <div class="about-content">
       <p>
         Hi, I am Josip Ivancic, a web developer working at
-        <AppLink href="https://www.nsoft.com/">NSoft</AppLink>. Currently based
+        <AppLink href="https://www.cycloid.io/">Cycloid</AppLink>. Currently based
         in Mostar, BiH.
       </p>
       <p>
