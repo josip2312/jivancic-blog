@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, computed, onUnmounted } from "vue";
-import postsData from "../../.vitepress/metadata.json";
+import { ref, computed, onUnmounted } from 'vue';
+import postsData from '../../.vitepress/metadata.json';
 
-const categories = ["Technical", "Non-technical"];
-const chosenCategory = ref(window.location.hash.split("#")[1] || categories[0]);
+const categories = ['Technical', 'Non-technical'];
+const chosenCategory = ref(window.location.hash.split('#')[1] || categories[0]);
 
 const posts = computed(() => {
   return postsData.filter(
@@ -12,20 +12,18 @@ const posts = computed(() => {
 });
 
 const updateCategory = () => {
-  chosenCategory.value = window.location.hash.split("#")[1];
+  chosenCategory.value = window.location.hash.split('#')[1];
 };
 
-window.addEventListener("hashchange", updateCategory);
+window.addEventListener('hashchange', updateCategory);
 
 onUnmounted(() => {
-  window.removeEventListener("hashchange", updateCategory);
+  window.removeEventListener('hashchange', updateCategory);
 });
 </script>
 
 <template>
-  <AppHeading>
-    Posts
-  </AppHeading>
+  <AppHeading> Posts </AppHeading>
   <div class="categories">
     <a
       v-for="category in categories"
@@ -73,8 +71,8 @@ onUnmounted(() => {
   line-height: 1.4;
 
   & > * + * {
-    padding-top: 1rem;
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.75rem;
     border-top: thin solid var(--vp-c-divider-light);
   }
 }

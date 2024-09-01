@@ -1,5 +1,5 @@
 ---
-title: Vue 3 and Vite with typescript and tooling
+title: Vue 3 and Vite With Typescript and Tooling
 date: 2021-11-03
 author: Josip Ivancic
 description: How to setup typescript, linting, and prettier in your next Vue and Vite project.

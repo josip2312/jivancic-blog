@@ -22,6 +22,10 @@ const isPost = computed(() => !!frontmatter.value.category);
 }
 
 .post .content {
-  max-width: 45rem !important;
+  max-width: 50rem !important;
+}
+
+.centered .content-container {
+  max-width: 50rem !important;
 }
 </style>

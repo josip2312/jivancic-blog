@@ -1,6 +1,5 @@
 ---
-title: Tips
-subtext: Programming tips
+title: Web Development
 sidebar: false
 page: true
 ---
@@ -13,7 +12,7 @@ page: true
 
 ## Using enums as prop types
 
-```js
+```ts
 import { toRefs } from "vue";
 
 enum ButtonSize {
@@ -40,8 +39,8 @@ const { primary, size } = toRefs(props);
 
 ## Destructuring with assignment
 
-```js
-const person = { fullName: "David" };
+```ts
+const person = { fullName: 'David' };
 
 const { fullName: name } = person;
 
@@ -50,21 +49,21 @@ console.log(name); // => David
 
 ## Import and re-export a default export in a single line
 
-```js
+```ts
 // utilities/index.js
-export { default as dates } from "./dates";
+export { default as dates } from './dates';
 
 // in another file
-import { dates } from "<some-path>/utilities";
+import { dates } from '<some-path>/utilities';
 ```
 
 ## Vue script setup prop typing with default values and complex types
 
 ```vue
 <script setup lang="ts">
-import { toRefs } from "vue";
+import { toRefs } from 'vue';
 
-type Size = "sm" | "md" | "lg";
+type Size = 'sm' | 'md' | 'lg';
 
 interface Props {
   primary?: boolean;
@@ -73,7 +72,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   primary: false,
-  size: "md",
+  size: 'md',
 });
 
 const { primary, size } = toRefs(props);
@@ -84,13 +83,13 @@ const { primary, size } = toRefs(props);
 
 ```vue
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent, PropType } from 'vue';
 
 export default defineComponent({
-  name: "MyComponent",
+  name: 'MyComponent',
   props: {
     type: String as PropType<string>, // cast to typescript type,
-    default: "box",
+    default: 'box',
   },
 });
 </script>

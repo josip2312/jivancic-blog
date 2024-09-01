@@ -1,5 +1,5 @@
 ---
-title: About me
+title: Information About Me
 subtext: Articles on things related to web development and lifestyle choices
 sidebar: false
 centered: true

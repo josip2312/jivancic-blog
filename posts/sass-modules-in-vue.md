@@ -1,5 +1,5 @@
 ---
-title: Sass modules with the Vue CLI
+title: Sass Modules With the Vue CLI
 date: 2021-11-01
 author: Josip Ivancic
 description: How to configure webpack for sass modules and set up scalable stylesheets with Vue 3 and the Vue CLI.

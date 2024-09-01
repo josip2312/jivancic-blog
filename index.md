@@ -1,6 +1,5 @@
 ---
-title: Posts
-subtext: Articles on things related to web development and lifestyle choices
+title: Web Development Posts
 sidebar: false
 centered: true
 ---

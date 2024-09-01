@@ -1,5 +1,5 @@
 ---
-title: Improve your sleep
+title: Improve Your Sleep
 date: 2022-01-02
 author: Josip Ivancic
 description: Exploring why you should care about your sleep and some science-based tips for improving your sleep quality.

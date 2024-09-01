@@ -1,11 +1,11 @@
 @mixin mq-small {
-  @media screen and(min-width: 720px) {
+  @media screen and (min-width: 720px) {
     @content;
   }
 }
 
 @mixin mq-x-small {
-  @media screen and(min-width: 321px) {
+  @media screen and (min-width: 321px) {
     @content;
   }
 }

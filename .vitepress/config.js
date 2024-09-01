@@ -5,14 +5,23 @@ require('./genMetadata').watchPosts();
  */
 module.exports = {
   title: 'Ivancic Josip',
-  description: "Ivancic Josip's blog",
+  description:
+    "Ivancic Josip's website, here you can find my blog posts on web development and lifestyle, tips and some information about me.",
   markdown: {
-    theme: 'github-dark',
+    theme: {
+      light: 'github-light',
+      dark: 'github-dark',
+    },
     lineNumbers: true,
   },
   themeConfig: {
+    siteTitle: 'Blog',
     nav: [
-      { text: 'Posts', link: '/' },
+      {
+        text: 'Posts',
+        link: '/',
+        title: 'Blog Posts',
+      },
       { text: 'Tips', link: '/tips' },
       { text: 'About', link: 'about' },
     ],
@@ -22,7 +31,13 @@ module.exports = {
         icon: 'linkedin',
         link: 'https://www.linkedin.com/in/josip-ivancic-b3521a1b4',
       },
-      { icon: 'instagram', link: 'https://www.instagram.com/ivancic_josip' },
     ],
+    footer: {
+      copyright: '© 2021-present Josip Ivancic',
+    },
+  },
+  head: [['link', { rel: 'icon', href: '/assets/favicon.ico' }]],
+  sitemap: {
+    hostname: 'https://jivancic.com/',
   },
 };

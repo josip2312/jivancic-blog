@@ -1,5 +1,5 @@
 ---
-title: Standing out in your field
+title: Standing out in Your Field
 date: 2022-08-11
 author: Josip Ivancic
 description: Observations on practical things you can do to stand out in your field of work.
