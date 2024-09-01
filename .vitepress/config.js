@@ -15,7 +15,6 @@ module.exports = {
     lineNumbers: true,
   },
   themeConfig: {
-    siteTitle: 'Blog',
     nav: [
       {
         text: 'Posts',
